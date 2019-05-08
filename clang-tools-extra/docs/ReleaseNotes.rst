@@ -67,6 +67,9 @@ The improvements are...
 Improvements to clang-tidy
 --------------------------
 
+- The 'smartpointersafety-test' check was renamed to :doc:`smartpointersafety-raw-pointer-initiation
+  <clang-tidy/checks/smartpointersafety-raw-pointer-initiation>`
+
 - New OpenMP module.
 
   For checks specific to `OpenMP <https://www.openmp.org/>`_ API.
@@ -100,6 +103,11 @@ Improvements to clang-tidy
 
   Finds and fixes ``absl::Time`` subtraction expressions to do subtraction
   in the Time domain instead of the numeric domain.
+
+- New :doc:`smartpointersafety-test
+  <clang-tidy/checks/smartpointersafety-test>` check.
+
+  FIXME: add release notes.
 
 - New :doc:`google-readability-avoid-underscore-in-googletest-name
   <clang-tidy/checks/google-readability-avoid-underscore-in-googletest-name>`

@@ -97,6 +97,11 @@ extern volatile int ReadabilityModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED ReadabilityModuleAnchorDestination =
     ReadabilityModuleAnchorSource;
 
+// This anchor is used to force the linker to link the SmartPointerSafetyModule.
+extern volatile int SmartPointerSafetyModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED SmartPointerSafetyModuleAnchorDestination =
+    SmartPointerSafetyModuleAnchorSource;
+
 // This anchor is used to force the linker to link the ObjCModule.
 extern volatile int ObjCModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED ObjCModuleAnchorDestination =

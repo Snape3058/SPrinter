@@ -188,7 +188,7 @@ extern int ConsumeString(const char *Input);
 
 const char *SomeStrings[] = {"alpha", "beta", "gamma"};
 
-int TestCheckerOverreach() {
+int RawPointerInitiationCheckerOverreach() {
   int Total = 0;
 
   for (const auto *Str : SomeStrings) {
