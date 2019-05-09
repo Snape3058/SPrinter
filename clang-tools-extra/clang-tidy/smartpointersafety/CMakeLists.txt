@@ -3,6 +3,7 @@ set(LLVM_LINK_COMPONENTS support)
 add_clang_library(clangTidySmartPointerSafetyModule
   RawPointerInitiationCheck.cpp
   SmartPointerSafetyTidyModule.cpp
+  SmartPointerTypeMatcher.cpp
 
   LINK_LIBS
   clangAST

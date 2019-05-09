@@ -24,7 +24,14 @@ public:
   RawPointerInitiationCheck(StringRef Name, ClangTidyContext *Context)
       : ClangTidyCheck(Name, Context) {}
   void registerMatchers(ast_matchers::MatchFinder *Finder) override;
+  void onStartOfTranslationUnit() override;
   void check(const ast_matchers::MatchFinder::MatchResult &Result) override;
+  void onEndOfTranslationUnit() override;
+
+private:
+  std::map<const Decl *, int> matchedRawPointers;
+
+  void generateFunctionSummary();
 };
 
 } // namespace smartpointersafety
