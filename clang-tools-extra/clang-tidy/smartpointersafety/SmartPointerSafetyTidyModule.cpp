@@ -10,6 +10,7 @@
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
 #include "RawPointerInitiationCheck.h"
+#include "TypeMismatchInitiationCheck.h"
 
 namespace clang {
 namespace tidy {
@@ -21,6 +22,8 @@ public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
     CheckFactories.registerCheck<RawPointerInitiationCheck>(
         "smartpointersafety-raw-pointer-initiation");
+    CheckFactories.registerCheck<TypeMismatchInitiationCheck>(
+        "smartpointersafety-type-mismatch-initiation");
   }
 };
 

@@ -4,6 +4,7 @@ add_clang_library(clangTidySmartPointerSafetyModule
   RawPointerInitiationCheck.cpp
   SmartPointerSafetyTidyModule.cpp
   SmartPointerTypeMatcher.cpp
+  TypeMismatchInitiationCheck.cpp
 
   LINK_LIBS
   clangAST

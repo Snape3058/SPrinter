@@ -151,6 +151,11 @@ Improvements to clang-tidy
   but either don't specify it or the clause is specified but with the kind
   other than ``none``, and suggests to use the ``default(none)`` clause.
 
+- New :doc:`smartpointersafety-type-mismatch-initiation
+  <clang-tidy/checks/smartpointersafety-type-mismatch-initiation>` check.
+
+  FIXME: add release notes.
+
 Improvements to clang-include-fixer
 -----------------------------------
 

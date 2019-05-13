@@ -275,4 +275,5 @@ Clang-Tidy Checks
    readability-uniqueptr-delete-release
    readability-uppercase-literal-suffix
    smartpointersafety-raw-pointer-initiation
+   smartpointersafety-type-mismatch-initiation
    zircon-temporary-objects
