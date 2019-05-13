@@ -11,6 +11,7 @@
 #include "../ClangTidyModuleRegistry.h"
 #include "RawPointerInitiationCheck.h"
 #include "TypeMismatchInitiationCheck.h"
+#include "UncheckedLockedWeakPointerCheck.h"
 
 namespace clang {
 namespace tidy {
@@ -24,6 +25,8 @@ public:
         "smartpointersafety-raw-pointer-initiation");
     CheckFactories.registerCheck<TypeMismatchInitiationCheck>(
         "smartpointersafety-type-mismatch-initiation");
+    CheckFactories.registerCheck<UncheckedLockedWeakPointerCheck>(
+        "smartpointersafety-unchecked-locked-weak-pointer");
   }
 };
 

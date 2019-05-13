@@ -276,4 +276,5 @@ Clang-Tidy Checks
    readability-uppercase-literal-suffix
    smartpointersafety-raw-pointer-initiation
    smartpointersafety-type-mismatch-initiation
+   smartpointersafety-unchecked-locked-weak-pointer
    zircon-temporary-objects

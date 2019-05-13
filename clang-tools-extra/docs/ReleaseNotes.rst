@@ -156,6 +156,11 @@ Improvements to clang-tidy
 
   FIXME: add release notes.
 
+- New :doc:`smartpointersafety-unchecked-locked-weak-pointer
+  <clang-tidy/checks/smartpointersafety-unchecked-locked-weak-pointer>` check.
+
+  FIXME: add release notes.
+
 Improvements to clang-include-fixer
 -----------------------------------
 
