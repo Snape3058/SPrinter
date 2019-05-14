@@ -9,6 +9,7 @@
 #include "../ClangTidy.h"
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
+#include "NonAllocatedMemoryInitiationCheck.h"
 #include "RawPointerInitiationCheck.h"
 #include "TypeMismatchInitiationCheck.h"
 #include "UncheckedLockedWeakPointerCheck.h"
@@ -21,6 +22,8 @@ namespace smartpointersafety {
 class SmartPointerSafetyModule : public ClangTidyModule {
 public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
+    CheckFactories.registerCheck<NonAllocatedMemoryInitiationCheck>(
+        "smartpointersafety-non-allocated-memory-initiation");
     CheckFactories.registerCheck<RawPointerInitiationCheck>(
         "smartpointersafety-raw-pointer-initiation");
     CheckFactories.registerCheck<TypeMismatchInitiationCheck>(

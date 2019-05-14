@@ -104,6 +104,11 @@ Improvements to clang-tidy
   Finds and fixes ``absl::Time`` subtraction expressions to do subtraction
   in the Time domain instead of the numeric domain.
 
+- New :doc:`smartpointersafety-non-allocated-memory-initiation
+  <clang-tidy/checks/smartpointersafety-non-allocated-memory-initiation>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`smartpointersafety-test
   <clang-tidy/checks/smartpointersafety-test>` check.
 

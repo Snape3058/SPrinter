@@ -274,6 +274,7 @@ Clang-Tidy Checks
    readability-string-compare
    readability-uniqueptr-delete-release
    readability-uppercase-literal-suffix
+   smartpointersafety-non-allocated-memory-initiation
    smartpointersafety-raw-pointer-initiation
    smartpointersafety-type-mismatch-initiation
    smartpointersafety-unchecked-locked-weak-pointer
