@@ -109,6 +109,11 @@ Improvements to clang-tidy
 
   FIXME: add release notes.
 
+- New :doc:`smartpointersafety-deallocating-observer-pointer
+  <clang-tidy/checks/smartpointersafety-deallocating-observer-pointer>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`smartpointersafety-test
   <clang-tidy/checks/smartpointersafety-test>` check.
 

@@ -9,6 +9,7 @@
 #include "../ClangTidy.h"
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
+#include "DeallocatingObserverPointerCheck.h"
 #include "NonAllocatedMemoryInitiationCheck.h"
 #include "RawPointerInitiationCheck.h"
 #include "TypeMismatchInitiationCheck.h"
@@ -26,6 +27,8 @@ public:
         "smartpointersafety-non-allocated-memory-initiation");
     CheckFactories.registerCheck<RawPointerInitiationCheck>(
         "smartpointersafety-raw-pointer-initiation");
+    CheckFactories.registerCheck<DeallocatingObserverPointerCheck>(
+        "smartpointersafety-deallocating-observer-pointer");
     CheckFactories.registerCheck<TypeMismatchInitiationCheck>(
         "smartpointersafety-type-mismatch-initiation");
     CheckFactories.registerCheck<UncheckedLockedWeakPointerCheck>(
