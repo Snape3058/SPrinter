@@ -72,6 +72,12 @@ ast_matchers::StatementMatcher getSmartPointerMemberCallExprInTypeWithArgument(
     const char *name, ast_matchers::TypeMatcher type,
     ast_matchers::StatementMatcher argument);
 
+/// Define matcher to match the member function call with `name` of a smart
+/// pointer with the given `type` and no arguments.
+ast_matchers::StatementMatcher
+getSmartPointerMemberCallExprInType(const char *name,
+                                    ast_matchers::TypeMatcher type);
+
 } // namespace smartpointersafety
 } // namespace tidy
 } // namespace clang

@@ -18,10 +18,8 @@ namespace tidy {
 namespace smartpointersafety {
 
 void UncheckedLockedWeakPointerCheck::registerMatchers(MatchFinder *Finder) {
-  auto callLock = cxxMemberCallExpr(
-      callee(memberExpr(hasDeclaration(cxxMethodDecl(hasName("lock"))),
-                        hasObjectExpression(ignoringImpCasts(declRefExpr(
-                            hasType(getWeakPointerTypeSimpleMatcher())))))));
+  auto callLock = getSmartPointerMemberCallExprInType(
+      "lock", getWeakPointerTypeSimpleMatcher());
 
   auto refFromLock = declRefExpr(hasDeclaration(
       varDecl(

@@ -54,6 +54,13 @@ StatementMatcher getSmartPointerMemberCallExprInTypeWithArgument(
       argumentCountIs(1), hasArgument(0, ignoringImpCasts(argument)));
 }
 
+StatementMatcher getSmartPointerMemberCallExprInType(const char *name,
+                                                     TypeMatcher type) {
+  return cxxMemberCallExpr(callee(memberExpr(
+      hasDeclaration(cxxMethodDecl(hasName(name))),
+      hasObjectExpression(ignoringImpCasts(declRefExpr(hasType(type)))))));
+}
+
 } // namespace smartpointersafety
 } // namespace tidy
 } // namespace clang
