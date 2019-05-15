@@ -11,6 +11,7 @@
 #include "../ClangTidyModuleRegistry.h"
 #include "DeallocatingObserverPointerCheck.h"
 #include "NonAllocatedMemoryInitiationCheck.h"
+#include "PrivateAutoptrInClassCheck.h"
 #include "RawPointerInitiationCheck.h"
 #include "TypeMismatchInitiationCheck.h"
 #include "UncheckedLockedWeakPointerCheck.h"
@@ -26,6 +27,8 @@ public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
     CheckFactories.registerCheck<NonAllocatedMemoryInitiationCheck>(
         "smartpointersafety-non-allocated-memory-initiation");
+    CheckFactories.registerCheck<PrivateAutoptrInClassCheck>(
+        "smartpointersafety-private-autoptr-in-class");
     CheckFactories.registerCheck<RawPointerInitiationCheck>(
         "smartpointersafety-raw-pointer-initiation");
     CheckFactories.registerCheck<DeallocatingObserverPointerCheck>(

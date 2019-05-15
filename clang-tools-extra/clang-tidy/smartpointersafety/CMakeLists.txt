@@ -3,6 +3,7 @@ set(LLVM_LINK_COMPONENTS support)
 add_clang_library(clangTidySmartPointerSafetyModule
   DeallocatingObserverPointerCheck.cpp
   NonAllocatedMemoryInitiationCheck.cpp
+  PrivateAutoptrInClassCheck.cpp
   RawPointerInitiationCheck.cpp
   SmartPointerSafetyTidyModule.cpp
   SmartPointerTypeMatcher.cpp
