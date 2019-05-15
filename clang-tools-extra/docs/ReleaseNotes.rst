@@ -104,6 +104,11 @@ Improvements to clang-tidy
   Finds and fixes ``absl::Time`` subtraction expressions to do subtraction
   in the Time domain instead of the numeric domain.
 
+- New :doc:`smartpointersafety-autoptr-in-container
+  <clang-tidy/checks/smartpointersafety-autoptr-in-container>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`smartpointersafety-private-autoptr-in-class
   <clang-tidy/checks/smartpointersafety-private-autoptr-in-class>` check.
 

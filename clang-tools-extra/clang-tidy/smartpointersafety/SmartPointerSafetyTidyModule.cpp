@@ -9,6 +9,7 @@
 #include "../ClangTidy.h"
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
+#include "AutoptrInContainerCheck.h"
 #include "DeallocatingObserverPointerCheck.h"
 #include "NonAllocatedMemoryInitiationCheck.h"
 #include "PrivateAutoptrInClassCheck.h"
@@ -25,6 +26,8 @@ namespace smartpointersafety {
 class SmartPointerSafetyModule : public ClangTidyModule {
 public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
+    CheckFactories.registerCheck<AutoptrInContainerCheck>(
+        "smartpointersafety-autoptr-in-container");
     CheckFactories.registerCheck<NonAllocatedMemoryInitiationCheck>(
         "smartpointersafety-non-allocated-memory-initiation");
     CheckFactories.registerCheck<PrivateAutoptrInClassCheck>(

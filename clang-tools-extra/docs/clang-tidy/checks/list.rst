@@ -274,6 +274,7 @@ Clang-Tidy Checks
    readability-string-compare
    readability-uniqueptr-delete-release
    readability-uppercase-literal-suffix
+   smartpointersafety-autoptr-in-container
    smartpointersafety-deallocating-observer-pointer
    smartpointersafety-non-allocated-memory-initiation
    smartpointersafety-private-autoptr-in-class
