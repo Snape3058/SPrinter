@@ -171,6 +171,11 @@ Improvements to clang-tidy
 
   FIXME: add release notes.
 
+- New :doc:`smartpointersafety-undeallocated-released-pointer
+  <clang-tidy/checks/smartpointersafety-undeallocated-released-pointer>` check.
+
+  FIXME: add release notes.
+
 Improvements to clang-include-fixer
 -----------------------------------
 

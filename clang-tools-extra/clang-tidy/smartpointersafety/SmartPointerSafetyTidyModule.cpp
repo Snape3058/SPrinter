@@ -14,6 +14,7 @@
 #include "RawPointerInitiationCheck.h"
 #include "TypeMismatchInitiationCheck.h"
 #include "UncheckedLockedWeakPointerCheck.h"
+#include "UndeallocatedReleasedPointerCheck.h"
 
 namespace clang {
 namespace tidy {
@@ -33,6 +34,8 @@ public:
         "smartpointersafety-type-mismatch-initiation");
     CheckFactories.registerCheck<UncheckedLockedWeakPointerCheck>(
         "smartpointersafety-unchecked-locked-weak-pointer");
+    CheckFactories.registerCheck<UndeallocatedReleasedPointerCheck>(
+        "smartpointersafety-undeallocated-released-pointer");
   }
 };
 

@@ -279,4 +279,5 @@ Clang-Tidy Checks
    smartpointersafety-raw-pointer-initiation
    smartpointersafety-type-mismatch-initiation
    smartpointersafety-unchecked-locked-weak-pointer
+   smartpointersafety-undeallocated-released-pointer
    zircon-temporary-objects
