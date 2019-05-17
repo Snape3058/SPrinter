@@ -10,6 +10,7 @@
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
 #include "AutoptrInContainerCheck.h"
+#include "AutoptrOwnershipTransferCheck.h"
 #include "DeallocatingObserverPointerCheck.h"
 #include "NonAllocatedMemoryInitiationCheck.h"
 #include "PrivateAutoptrInClassCheck.h"
@@ -28,6 +29,8 @@ public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
     CheckFactories.registerCheck<AutoptrInContainerCheck>(
         "smartpointersafety-autoptr-in-container");
+    CheckFactories.registerCheck<AutoptrOwnershipTransferCheck>(
+        "smartpointersafety-autoptr-ownership-transfer");
     CheckFactories.registerCheck<NonAllocatedMemoryInitiationCheck>(
         "smartpointersafety-non-allocated-memory-initiation");
     CheckFactories.registerCheck<PrivateAutoptrInClassCheck>(

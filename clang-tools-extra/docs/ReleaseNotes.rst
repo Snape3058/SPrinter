@@ -109,6 +109,11 @@ Improvements to clang-tidy
 
   FIXME: add release notes.
 
+- New :doc:`smartpointersafety-autoptr-ownership-transfer
+  <clang-tidy/checks/smartpointersafety-autoptr-ownership-transfer>` check.
+
+  FIXME: add release notes.
+
 - New :doc:`smartpointersafety-private-autoptr-in-class
   <clang-tidy/checks/smartpointersafety-private-autoptr-in-class>` check.
 
