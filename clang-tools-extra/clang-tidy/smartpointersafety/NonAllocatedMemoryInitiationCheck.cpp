@@ -18,11 +18,14 @@ namespace tidy {
 namespace smartpointersafety {
 
 void NonAllocatedMemoryInitiationCheck::registerMatchers(MatchFinder *Finder) {
+  auto notInSkippedAncestor = unless(anyOf(cxxNewExpr(), callExpr()));
+
   auto getAddressOperator = unaryOperator(hasOperatorName("&")).bind("init");
   auto arrayPointer = expr(
       hasType(isAnyPointer()),
       hasDescendant(
-          implicitCastExpr(hasCastKind(CK_ArrayToPointerDecay)).bind("init")));
+          implicitCastExpr(hasCastKind(CK_ArrayToPointerDecay)).bind("init")),
+      notInSkippedAncestor);
   auto concreteAddress =
       cStyleCastExpr(hasCastKind(CK_IntegralToPointer)).bind("init");
 
