@@ -25,6 +25,8 @@ void UndeallocatedReleasedPointerCheck::registerMatchers(MatchFinder *Finder) {
                      "release", getUniquePointerTypeSimpleMatcher())),
            hasParent(stmt(anyOf(
                unaryOperator(hasOperatorName("*")), memberExpr(isArrow()),
+               // match (void) sp.release();
+               cStyleCastExpr(hasCastKind(CK_ToVoid)),
                // GNU statement expressions should not be matched, as we do not
                // know whether this return value may be used outside
                compoundStmt(unless(hasParent(stmtExpr()))), ifStmt(),
