@@ -50,10 +50,13 @@ void TypeMismatchInitiationCheck::check(
   bool ptrIsArray = (*ptrtype)->isArrayType();
   if (newIsArray != ptrIsArray) {
     diag(newexpr->getBeginLoc(),
-         "Initiation CXXNewExpr type `" +
-             newexpr->getConstructExpr()->getType().getAsString() +
-             "' dose not match its declaration type `" +
-             ptrtype->getAsString() + "'.");
+         "Initiation CXXNewExpr type " +
+             (newexpr->getConstructExpr()
+                  ? "`" + newexpr->getConstructExpr()->getType().getAsString() +
+                        "' "
+                  : "") +
+             "dose not match its declaration type `" + ptrtype->getAsString() +
+             "'.");
   }
 }
 
