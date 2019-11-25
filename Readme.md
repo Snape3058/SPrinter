@@ -122,7 +122,7 @@ Usage
 
 [clang-tidy with SPrinter](about:blank): Coming soon.
 
-Please contact us if you need the source code. <a style="color:white;">Because my boss asked me to hide the source code.</a>
+Please contact us if you need the source code.
 
 ### Tool Usage
 
