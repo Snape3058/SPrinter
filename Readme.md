@@ -120,7 +120,7 @@ Usage
 
 ### Download
 
-[clang-tidy with SPrinter](about:blank): Coming soon.
+[clang-tidy with SPrinter](http://lcs.ios.ac.cn/~maxt/SPrinter/clang-tidy) (SHA256SUM 2c237c9a7e280f91d705ed6e16189c0a63b17643f09f3e233b2f7e6ecc712272)
 
 Please contact us if you need the source code.
 
@@ -141,4 +141,4 @@ Publication
 -----------
 
 - [YouTube Video Introduction](https://youtu.be/xD1b3cJ8s2g).
-- [ASE 2019 Tool Demonstration Paper](https://2019.ase-conferences.org/details/ase-2019-Demonstrations/30/SPrinter-A-Static-Checker-for-Finding-Smart-Pointer-Errors-in-C-Programs).
+- [ASE 2019 Tool Demonstration Paper](http://lcs.ios.ac.cn/~maxt/SPrinter/ASE-2019-Tool.pdf).
